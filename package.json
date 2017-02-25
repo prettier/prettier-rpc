@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "prettier": "0.19.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-json": "^2.1.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "vscode-jsonrpc": "3.0.4"
+  }
+}
