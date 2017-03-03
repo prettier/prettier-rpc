@@ -203,9 +203,9 @@ path-parse@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
 
-prettier@0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-0.20.0.tgz#9cae8d4c0043dc3b37c633c39aaebd82939423f1"
+prettier@0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-0.21.0.tgz#5187ab95fdd9ca63dccf6217ed03b434d72771f8"
   dependencies:
     ast-types "0.9.4"
     babel-code-frame "6.22.0"

@@ -4,7 +4,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "prettier": "0.20.0"
+    "prettier": "0.21.0"
   },
   "devDependencies": {
     "rollup": "^0.41.4",
