@@ -4,7 +4,7 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "prettier": "1.2.0"
+    "prettier": "1.2.1"
   },
   "devDependencies": {
     "diff": "^3.2.0",

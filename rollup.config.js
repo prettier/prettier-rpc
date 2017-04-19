@@ -3,20 +3,22 @@ import json from 'rollup-plugin-json';
 import replace from 'rollup-plugin-replace';
 import resolve from 'rollup-plugin-node-resolve';
 
-const version = 
-  process.env.rpc ? 'rpc' : 
-  process.env.lib ? 'lib' : 
+const type =
+  process.env.rpc ? 'rpc' :
+  process.env.lib ? 'lib' :
   process.env.cli ? 'cli' : 'invalid';
 
-if (version === 'invalid') {
-  throw new Error('Provide a valid output version via --environment');
+if (type === 'invalid') {
+  throw new Error('Provide a valid output type via --environment');
 }
 
+const version = require('./package.json').dependencies.prettier;
+
 export default {
-  entry: `prettier-${version}.js`,
-  dest: `dist/prettier-${version}-${require('./package.json').dependencies.prettier}.min.js`,
+  entry: `prettier-${type}.js`,
+  dest: `dist/${version}/prettier-${type}-${version}.min.js`,
   format: 'cjs',
-  banner: version === 'cli' ? '#!/usr/bin/env node\n' : undefined,
+  banner: type === 'cli' ? '#!/usr/bin/env node\n' : undefined,
   plugins: [
     replace({
       '#!/usr/bin/env node\n': '',
@@ -27,10 +29,10 @@ export default {
   ],
   useStrict: false,
   external: [
-    'assert', 
+    'assert',
     // Node modules
-    'fs', 
-    'process', 
+    'fs',
+    'process',
     'path',
     'util',
     'events',
