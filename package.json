@@ -1,16 +1,18 @@
 {
   "scripts": {
-    "build": "rollup -c rollup.config.js",
+    "build": "rollup --environment lib -c rollup.config.js && rollup --environment cli -c rollup.config.js && rollup --environment rpc -c rollup.config.js",
     "test": "node test.js"
   },
   "dependencies": {
     "prettier": "1.1.0"
   },
   "devDependencies": {
+    "diff": "^3.2.0",
     "rollup": "^0.41.4",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-json": "^2.1.0",
     "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
     "vscode-jsonrpc": "3.0.4"
   }
 }
